@@ -14,6 +14,7 @@
 		C2215B0E19F41D3A003958E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2215B0C19F41D3A003958E8 /* LaunchScreen.xib */; };
 		C2215B1A19F41D3A003958E8 /* iTunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2215B1919F41D3A003958E8 /* iTunesSearchTests.swift */; };
 		C2215B2419F4249F003958E8 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2215B2319F4249F003958E8 /* APIController.swift */; };
+		C2A114ED19F43199005EE618 /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A114EC19F43199005EE618 /* Blank52.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		C2215B1819F41D3A003958E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2215B1919F41D3A003958E8 /* iTunesSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchTests.swift; sourceTree = "<group>"; };
 		C2215B2319F4249F003958E8 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		C2A114EC19F43199005EE618 /* Blank52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blank52.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		C2215B0019F41D3A003958E8 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				C2A114EC19F43199005EE618 /* Blank52.png */,
 				C2215B0319F41D3A003958E8 /* AppDelegate.swift */,
 				C2215B0519F41D3A003958E8 /* SearchResultsViewController.swift */,
 				C2215B0719F41D3A003958E8 /* Main.storyboard */,
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2215B0919F41D3A003958E8 /* Main.storyboard in Resources */,
+				C2A114ED19F43199005EE618 /* Blank52.png in Resources */,
 				C2215B0E19F41D3A003958E8 /* LaunchScreen.xib in Resources */,
 				C2215B0B19F41D3A003958E8 /* Images.xcassets in Resources */,
 			);
@@ -409,6 +413,7 @@
 				C2215B1F19F41D3A003958E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2215B2019F41D3A003958E8 /* Build configuration list for PBXNativeTarget "iTunesSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				C2215B2219F41D3A003958E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
