@@ -15,6 +15,7 @@
 		C2215B1A19F41D3A003958E8 /* iTunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2215B1919F41D3A003958E8 /* iTunesSearchTests.swift */; };
 		C2215B2419F4249F003958E8 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2215B2319F4249F003958E8 /* APIController.swift */; };
 		C2A114ED19F43199005EE618 /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A114EC19F43199005EE618 /* Blank52.png */; };
+		C2A114EF19F4359B005EE618 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A114EE19F4359B005EE618 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		C2215B1919F41D3A003958E8 /* iTunesSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchTests.swift; sourceTree = "<group>"; };
 		C2215B2319F4249F003958E8 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		C2A114EC19F43199005EE618 /* Blank52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blank52.png; sourceTree = "<group>"; };
+		C2A114EE19F4359B005EE618 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				C2215B0C19F41D3A003958E8 /* LaunchScreen.xib */,
 				C2215B0119F41D3A003958E8 /* Supporting Files */,
 				C2215B2319F4249F003958E8 /* APIController.swift */,
+				C2A114EE19F4359B005EE618 /* Album.swift */,
 			);
 			path = iTunesSearch;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				C2215B0619F41D3A003958E8 /* SearchResultsViewController.swift in Sources */,
 				C2215B0419F41D3A003958E8 /* AppDelegate.swift in Sources */,
 				C2215B2419F4249F003958E8 /* APIController.swift in Sources */,
+				C2A114EF19F4359B005EE618 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,9 +13,10 @@ protocol APIControllerProtocol {
 }
 
 class APIController {
-    var delegate: APIControllerProtocol?
+    var delegate: APIControllerProtocol
     
-    init() {
+    init(delegate: APIControllerProtocol) {
+        self.delegate = delegate
     }
     func searchItunesFor(searchTerm: String) {
         
@@ -26,7 +27,7 @@ class APIController {
         
         //Optional binding see https://medium.com/arthurs-coding-tips/optionals-in-swift-c94fd231e7a4
         if let escapedSearchTerm = itunesSearchTerm.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) {
-            let urlPath = "http://itunes.apple.com/search?term=\(escapedSearchTerm)&media=software"
+           let urlPath = "https://itunes.apple.com/search?term=\(escapedSearchTerm)&media=music&entity=album"
             let url: NSURL = NSURL(string: urlPath)
             let session = NSURLSession.sharedSession()
             let task = session.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
@@ -43,7 +44,7 @@ class APIController {
                     println("JSON Error \(err!.localizedDescription)")
                 }
                 let results: NSArray = jsonResult["results"] as NSArray
-                self.delegate?.didReceiveAPIResults(jsonResult)
+                self.delegate.didReceiveAPIResults(jsonResult)
                 //dispatch_async(dispatch_get_main_queue(), {
                   //  self.tableData = results
                     //self.tblResults!.reloadData()
