@@ -7,8 +7,9 @@
 //
 
 import UIKit
-
+import MediaPlayer
 class DetailsViewController: UIViewController, APIControllerProtocol {
+    var mediaPlayer: MPMoviePlayerController = MPMoviePlayerController()
     lazy var api : APIController = APIController(delegate: self)
     @IBOutlet weak var tracksTableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -58,6 +59,15 @@ class DetailsViewController: UIViewController, APIControllerProtocol {
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var track = tracks[indexPath.row]
+        mediaPlayer.stop()
+        mediaPlayer.contentURL = NSURL(string: track.previewUrl)
+        mediaPlayer.play()
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) as? TrackCell {
+            cell.playLabel.text = "🆗"
+        }
+    }
     
     func didReceiveAPIResults(results: NSDictionary) {
         var resultsArr: NSArray = results["results"] as NSArray
@@ -65,6 +75,14 @@ class DetailsViewController: UIViewController, APIControllerProtocol {
             self.tracks = Track.tracksWithJSON(resultsArr)
             self.tracksTableView.reloadData()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
+    }
+    
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
+        UIView.animateWithDuration(0.25, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1,1,1)
         })
     }
 }
