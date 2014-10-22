@@ -14,17 +14,18 @@ class Album {
     var thumbnailImageURL: String
     var largeImageURL: String
     var itemURL: String
+    var collectionId: Int
     var artistURL: String
     
-    init(name: String, price: String, thumbnailImageURL: String, largeImageURL: String, itemURL: String, artistURL: String) {
+    init(name: String, price: String, thumbnailImageURL: String, largeImageURL: String, itemURL: String, artistURL: String, collectionId: Int) {
         self.title = name
         self.price = price
         self.thumbnailImageURL = thumbnailImageURL
         self.largeImageURL = largeImageURL
         self.itemURL = itemURL
         self.artistURL = artistURL
+        self.collectionId = collectionId
     }
-    
     class func albumsWithJSON(allResults: NSArray) -> [Album]{
         var albums = [Album]()
         if allResults.count > 0 {
@@ -58,7 +59,8 @@ class Album {
                     itemURL = result["trackViewUrl"] as? String
                 }
                 
-                var newAlbum = Album(name: name!, price: price!, thumbnailImageURL: thumbnailURL, largeImageURL: imageURL, itemURL: itemURL!, artistURL: artistURL)
+                var collectionId = result["collectionId"] as? Int
+                var newAlbum = Album(name: name!, price: price!, thumbnailImageURL: thumbnailURL, largeImageURL: imageURL, itemURL: itemURL!, artistURL: artistURL, collectionId: collectionId!)
                 albums.append(newAlbum)
             }
         }
